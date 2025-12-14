@@ -6,7 +6,6 @@
     bottom: 3px;
     height: 92%;
     width: 99%;
-    z-index: 2;
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
     background-image: repeating-radial-gradient(circle, rgba(95, 93, 93, 0.137) 0, rgba(70, 70, 70, 0.078) 1.5px, transparent 1.5px, transparent 4px);
     background-size: 8px 8px;
@@ -17,7 +16,7 @@
     align-items: center;
     height: 150px;
     width: 100%;
-    z-index: 1;
+
     background-color: rgb(26, 13, 13);
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
     
@@ -33,21 +32,14 @@
 
 
     background-image: 
-        /* 1. Triángulo principal superior izquierda (#4a90e2) */
-        /* CAMBIO: Usar 'to top left' para pegar a 0% 0% */
-        linear-gradient(to top left, transparent 50%, #4a57e2 50%),
-        /* 2. Sombra superior izquierda (rgba(0, 0, 0, 0.3)) */
-        /* CAMBIO: Usar 'to top left' para pegar a 0% 0% */
-        linear-gradient(to top left, transparent 50%, rgb(0, 0, 0) 50%),
-        
-        /* 3. Triángulo principal inferior derecha (#e33) */
-        /* CAMBIO: Usar 'to bottom right' para pegar a 100% 100% */
-        linear-gradient(to bottom right, transparent 50%, rgb(228, 41, 41) 50%),
-        /* 4. Sombra inferior derecha (rgba(0, 0, 0, 0.3)) */
-        /* CAMBIO: Usar 'to bottom right' para pegar a 100% 100% */
-        linear-gradient(to bottom right, transparent 50%, rgb(0, 0, 0) 50%);
 
-    /* ... background-size y background-position se mantienen ... */
+        linear-gradient(to top left, transparent 50%, #4a57e2 50%),
+
+        linear-gradient(to top left, transparent 50%, rgb(0, 0, 0) 50%),
+
+        linear-gradient(to bottom right, transparent 50%, rgb(228, 41, 41) 50%),
+
+        linear-gradient(to bottom right, transparent 50%, rgb(0, 0, 0) 50%);
 
 
     /* Define el tamaño de cada fondo (ancho x alto del área del triángulo) */
@@ -120,28 +112,9 @@ main {
 }
 
 .profile{
-    border-radius: 100px;
+    box-shadow: 5px 5px 0px 0px #000000bf; 
     width: 125px;
     height: 200px;
-}
-
-#sobre-mi{
-    width: 60%;
-}
-
-#habilidades{
-    width: 40%;
-}
-
-#estudios{
-    width: 50%;
-}
-
-#hobbies{
-    width: 40%;
-}
-#redes-sociales{
-    width: 40%;
 }
 
 
