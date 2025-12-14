@@ -1,0 +1,162 @@
+#header{
+    position: relative;
+    top: 3px;
+    left: 3px;
+    right: 3px; 
+    bottom: 3px;
+    height: 92%;
+    width: 99%;
+    z-index: 2;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+    background-image: repeating-radial-gradient(circle, rgba(95, 93, 93, 0.137) 0, rgba(70, 70, 70, 0.078) 1.5px, transparent 1.5px, transparent 4px);
+    background-size: 8px 8px;
+}
+
+#header-shadow{
+    position: relative;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(26, 13, 13);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+    
+}
+
+
+#background{
+    
+
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+
+
+    background-image: 
+        /* 1. Triángulo principal superior izquierda (#4a90e2) */
+        /* CAMBIO: Usar 'to top left' para pegar a 0% 0% */
+        linear-gradient(to top left, transparent 50%, #4a57e2 50%),
+        /* 2. Sombra superior izquierda (rgba(0, 0, 0, 0.3)) */
+        /* CAMBIO: Usar 'to top left' para pegar a 0% 0% */
+        linear-gradient(to top left, transparent 50%, rgb(0, 0, 0) 50%),
+        
+        /* 3. Triángulo principal inferior derecha (#e33) */
+        /* CAMBIO: Usar 'to bottom right' para pegar a 100% 100% */
+        linear-gradient(to bottom right, transparent 50%, rgb(228, 41, 41) 50%),
+        /* 4. Sombra inferior derecha (rgba(0, 0, 0, 0.3)) */
+        /* CAMBIO: Usar 'to bottom right' para pegar a 100% 100% */
+        linear-gradient(to bottom right, transparent 50%, rgb(0, 0, 0) 50%);
+
+    /* ... background-size y background-position se mantienen ... */
+
+
+    /* Define el tamaño de cada fondo (ancho x alto del área del triángulo) */
+      background-size: 60% 30%, 60% 30%, 60% 30%, 60% 30%;
+
+    /* Define la posición de cada fondo */
+    background-position: 
+        /* Posición del principal superior (sup izq) */
+        0% 0%, 
+        /* Posición de la sombra superior (ligeramente desplazado) */
+        5px 5px, 
+        /* Posición del principal inferior (inf der) */
+        100% 100%, 
+        /* Posición de la sombra inferior (ligeramente desplazado) */
+        calc(100% - 5px) calc(100% - 5px);
+
+    /* Asegura que los gradientes no se repitan */
+    background-repeat: no-repeat;
+}
+
+
+body{
+ 
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(242, 238, 10, 0.45) 2%,rgba(68, 124, 255, 0.616) 50%, rgba(69, 225, 252, 0.413) 100%), url('../assets/images/background.png');
+
+    background-attachment: fixed, fixed;
+    background-size: cover, 100% 100%;
+    background-position: center center, 0 0;
+    background-repeat: no-repeat, no-repeat;
+           
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los paneles bajen a la siguiente línea */
+    justify-content: space-around; /* Distribuye el espacio entre los paneles */
+    margin-top: 150px; /* AGREGAR: Empujar el contenido debajo del encabezado de 155px */
+}
+
+.section{
+    
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* Centrar elementos dentro del panel */
+    
+    /* Usar flex-basis para definir el tamaño base de cada panel */
+    flex-basis: 40%; /* Cada panel ocupará un 45% del ancho de main (dos por fila) */
+    min-width: 300px;
+
+    gap: 20px; /* Espacio entre paneles */
+    padding: 20px;
+    border: 3px solid #000; /* Borde negro grueso */
+    padding: 15px;
+    margin: 15px;
+    background-color: azure;
+    background-image: repeating-radial-gradient(circle, rgba(95, 93, 93, 0.137) 0, rgba(70, 70, 70, 0.078) 1.5px, transparent 1.5px, transparent 4px);
+    background-size: 8px 8px;
+    box-shadow: 5px 5px 0px 0px #000000bf; /* Sombra para dar efecto de recorte */
+    transform: rotate(-1deg); /* Ligera rotación para un estilo "dibujado a mano" */
+    transition: transform 0.2s;
+
+    
+}
+
+.section:hover{
+    transform: rotate(0deg) scale(1.02);
+    cursor: pointer;
+}
+
+.profile{
+    border-radius: 100px;
+    width: 125px;
+    height: 200px;
+}
+
+#sobre-mi{
+    width: 60%;
+}
+
+#habilidades{
+    width: 40%;
+}
+
+#estudios{
+    width: 50%;
+}
+
+#hobbies{
+    width: 40%;
+}
+#redes-sociales{
+    width: 40%;
+}
+
+
+
+.icons {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    box-shadow: 2px 2px 0px var(--color-oscuro); 
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.icons:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(1.2);
+    cursor: pointer;
+}
