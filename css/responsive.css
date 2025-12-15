@@ -1,28 +1,26 @@
 @media (max-width: 600px) {
-    
 
-    /* --- 1. Contenedor principal (main) --- */
-    /* Asegura que no haya espacio extra */
+    #header-shadow{
+        height: 200px;
+    }
+    
     main {
         padding: 10px;
     }
 
-    /* --- 2. Paneles de Sección (.section) --- */
+
     .section {
-        /* Fuerza a que cada panel ocupe el 100% del ancho del contenedor. */
-        /* Esto anula el flex-basis: 45%; que usamos para el diseño de escritorio. */
-        flex-basis: 100%;
-        min-width: unset; /* Elimina la restricción de ancho mínimo */
-        margin: 10px 0; /* Margen vertical para separarlos */
         
-        /* Opcional: Centrar el texto en móvil para mejor legibilidad */
+        flex-basis: 100%;
+        min-width: unset; 
+        margin: 10px 0;
+    
         text-align: center;
     }
 
-    /* --- 3. Encabezado (header) --- */
-    /* Reducir el tamaño de la fuente para que quepa en pantallas pequeñas */
+
     #header h1 {
-        font-size: 2em; /* Puedes ajustar este valor */
+        font-size: 2em; 
         line-height: 1.1;
     }
 
@@ -30,25 +28,19 @@
         font-size: 0.9em;
     }
     
-    /* --- 4. Redes Sociales (Para centrar los iconos si es necesario) --- */
-    /* Como el texto está centrado en .section, los elementos de la lista se centrarán. */
+
     #redes-sociales ul {
-        padding-left: 0; /* Elimina el padding de la lista para centrarla mejor */
+        padding-left: 0; 
         text-align: center;
     }
     
-    /* Asegura que los íconos y texto estén en línea y centrados */
+ 
     #redes-sociales li {
         display: inline-block;
         margin: 5px 10px;
     }
 
     #background {
-        background-size: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
-    }
-
-    /* También podrías reducir la altura del encabezado si el contenido es más pequeño */
-    #header-shadow, #header {
-        height: 120px; /* Reducir a 120px de alto */
+        background-size: 50% 20%, 50% 20%, 50% 20%, 50% 20%;
     }
 }
