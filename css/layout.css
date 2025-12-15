@@ -64,7 +64,7 @@
 body{
  
     text-align: center;
-    background-image: linear-gradient(to right, rgba(242, 238, 10, 0.45) 2%,rgba(68, 124, 255, 0.616) 50%, rgba(69, 225, 252, 0.413) 100%), url('../assets/images/background.png');
+    background-image: linear-gradient(to right, rgba(242, 238, 10, 0.288) 2%,rgba(69, 225, 252, 0.413) 50%, rgba(68, 124, 255, 0.616) 100%), url('../assets/images/background.png');
 
     background-attachment: fixed, fixed;
     background-size: cover, 100% 100%;
@@ -110,6 +110,31 @@ main {
     transform: rotate(0deg) scale(1.02);
     cursor: pointer;
 }
+
+ul {
+    /* Permitir que la lista ocupe todo el ancho del panel */
+    width: 100%; 
+    
+    /* Eliminar el margen y el padding por defecto para empezar desde cero */
+    margin: 0;
+    padding: 0 0 0 10px; /* Mantener un poco de padding a la izquierda para las viñetas */
+    
+    list-style-type: square;
+    
+    /* Si la lista también es afectada por el display: flex del .section, forzamos su visualización */
+    display: block; 
+}
+
+
+li{
+    display: list-item;
+    margin-bottom: 5px;
+}
+
+#redes-sociales ul{
+    list-style-type: none;
+}
+
 
 .profile{
     box-shadow: 5px 5px 0px 0px #000000bf; 
