@@ -1,4 +1,14 @@
-/* Los estilos se aplican a todo el documento */
+
+body {
+
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+    
+
+}
+
+
 #header{
     
     font-family: "Bangers", system-ui;
@@ -16,12 +26,4 @@ h2{
     font-style: normal;;
 }
 
-body {
-
-    font-family: "Comic Neue", cursive;
-    font-weight: 300;
-    font-style: normal;
-    
-
-}
 
